@@ -1,2 +1,2 @@
 # javaScript
-Deep dive into JavaScript
+A Deep dive into JavaScript
