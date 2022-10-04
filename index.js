@@ -1111,3 +1111,226 @@ function updateRecords(records, id, prop, value) {
 // updateRecords(recordCollection, 5439, 'artist', 'ABBA');
 // updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me");
 updateRecords(recordCollection, 2548, "artist", "");
+
+// Iterate with JavaScript While Loops
+// Setup
+const myAry = [];
+let i = 5;
+
+while (i >= 0) {
+  myAry.push(i);
+  i--;
+}
+
+console.log(myAry);
+// Only change code below this line
+
+// Iterate with JavaScript For Loops
+// Setup
+const mrray = [];
+
+for (let i = 1; i <= 5; i++) {
+  mrray.push(i);
+}
+
+console.log(myArray);
+
+// Only change code below this line
+
+// Iterate Odd Numbers With a For Loop
+// Setup
+const may = [];
+
+for (let i = 1; i < 10; i += 2) {
+  may.push(i);
+}
+
+console.log(may);
+
+// Only change code below this line
+
+// Count Backwards With a For Loop
+// Setup
+const ray = [];
+for (let i = 9; i > 0; i -= 2) {
+  ray.push(i);
+}
+
+console.log(ray);
+
+// Only change code below this line
+
+// Iterate Through an Array with a For Loop
+// Setup
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+
+console.log(total);
+
+// Only change code below this line
+
+// multiplication of multi-dimensional array
+function multiplyAll(arr) {
+  let product = 1;
+  // Only change code below this line
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+
+  console.log(product);
+  // Only change code above this line
+  return product;
+}
+
+multiplyAll([
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+]);
+
+// Iterate with JavaScript Do...While Loops
+// Setup
+const my = [];
+let a = 10;
+
+// Only change code below this line
+do {
+  my.push(i);
+  a++;
+} while (i < 5);
+
+// Replace Loops using Recursion
+function sum(arr, n) {
+  // Only change code below this line
+  if (n <= 0) {
+    return 0;
+  } else {
+    return sum(arr, n - 1) + arr[n - 1];
+  }
+
+  // Only change code above this line
+}
+
+sum([1], 0);
+sum([2, 3, 4], 1);
+sum([2, 3, 4, 5], 3);
+
+// Profile Lookup
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+  for (let i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name && contacts[i].hasOwnProperty(prop)) {
+      return contacts[i][prop];
+    } else if (contacts[i].firstName === name) {
+      if (contacts[i].hasOwnProperty(name) === false) {
+        return "No such property";
+      }
+    }
+  }
+
+  return "No such contact";
+  // Only change code above this line
+}
+
+lookUpProfile("Kristian", "lastName");
+
+// Generate Random Fractions with JavaScript
+function randomFraction() {
+  // Only change code below this line
+
+  return Math.random();
+
+  // Only change code above this line
+}
+
+// Generate Random Whole Numbers with JavaScript
+function randomWholeNum() {
+  // Only change code below this line
+
+  return Math.floor(Math.random() * 10);
+}
+
+// Generate Random Whole Numbers within a Range
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+  // Only change code above this line
+}
+
+randomRange(5, 10);
+
+// Use the parseInt Function
+function convertToInteger(str) {
+  return parseInt(str);
+}
+
+convertToInteger("56");
+
+// Use the parseInt Function with a Radix
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+convertToInteger("10011");
+
+// Use the Conditional (Ternary) Operator
+function checkEqual(a, b) {
+  return a === b ? "Equal" : "Not Equal";
+}
+
+checkEqual(1, 2);
+
+// Use Multiple Conditional (Ternary) Operators
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+
+checkSign(10);
+
+// Use Recursion to Create a Countdown
+// Only change code below this line
+function countdown(n) {
+  return n < 1 ? [] : [n, ...countdown(n - 1)];
+}
+// Only change code above this line
+
+// Use Recursion to Create a Range of Numbers
+function rangeOfNumbers(startNum, endNum) {
+  return endNum < startNum
+    ? []
+    : [...rangeOfNumbers(startNum, endNum - 1), endNum];
+}
