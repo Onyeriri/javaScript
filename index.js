@@ -2364,161 +2364,160 @@
 // // // // // // // // // // findLongestWordLength("What is the average airspeed velocity of an unladen swallow");
 // // // // // // // // // // findLongestWordLength("What if we try a super-long word such as otorhinolaryngology");
 
-// // // // // // // // // // Return Largest Numbers in Arrays
-// // // // // // // // // function largestOfFour(arr) {
-// // // // // // // // //   const results = [];
-// // // // // // // // //   for (let i = 0; i < arr.length; i++) {
-// // // // // // // // //     let largestNumber = arr[i][0];
-// // // // // // // // //     for (let j = 1; j < arr[i].length; j++) {
-// // // // // // // // //       if (arr[i][j] > largestNumber) {
-// // // // // // // // //         largestNumber = arr[i][j];
-// // // // // // // // //       }
-// // // // // // // // //     }
-// // // // // // // // //     results[i] = largestNumber;
-// // // // // // // // //   }
+// // // // // // // // // Return Largest Numbers in Arrays
+// // // // // // // // function largestOfFour(arr) {
+// // // // // // // //   const results = [];
+// // // // // // // //   for (let i = 0; i < arr.length; i++) {
+// // // // // // // //     let largestNumber = arr[i][0];
+// // // // // // // //     for (let j = 1; j < arr[i].length; j++) {
+// // // // // // // //       if (arr[i][j] > largestNumber) {
+// // // // // // // //         largestNumber = arr[i][j];
+// // // // // // // //       }
+// // // // // // // //     }
+// // // // // // // //     results[i] = largestNumber;
+// // // // // // // //   }
 
-// // // // // // // // //   return results;
-// // // // // // // // // }
-
-// // // // // // // // // largestOfFour([
-// // // // // // // // //   [4, 5, 1, 3],
-// // // // // // // // //   [13, 27, 18, 26],
-// // // // // // // // //   [32, 35, 37, 39],
-// // // // // // // // //   [1000, 1001, 857, 1],
-// // // // // // // // // ]);
-
-// // // // // // // // // Confirm the Ending
-// // // // // // // // function confirmEnding(str, target) {
-// // // // // // // //   return str.slice(-target.length) === target
+// // // // // // // //   return results;
 // // // // // // // // }
 
-// // // // // // // // confirmEnding("Bastian", "n");
+// // // // // // // // largestOfFour([
+// // // // // // // //   [4, 5, 1, 3],
+// // // // // // // //   [13, 27, 18, 26],
+// // // // // // // //   [32, 35, 37, 39],
+// // // // // // // //   [1000, 1001, 857, 1],
+// // // // // // // // ]);
 
-// // // // // // // // Repeat a String Repeat a String
-// // // // // // // function repeatStringNumTimes(str, num) {
-// // // // // // //   let arr = []
-// // // // // // //   for(let i = 0; i < num && num > 0; i++){
-// // // // // // //     arr.push(str)
-// // // // // // //     // console.log(str)
-// // // // // // //   }
-
-// // // // // // //   if(num > 0) {
-// // // // // // //     str = arr.toString().replaceAll(',', '');
-// // // // // // //     console.log(str);
-// // // // // // //     return str;
-// // // // // // //   }else {
-// // // // // // //     console.log("");
-// // // // // // //     return "";
-// // // // // // //   }
-
+// // // // // // // // Confirm the Ending
+// // // // // // // function confirmEnding(str, target) {
+// // // // // // //   return str.slice(-target.length) === target
 // // // // // // // }
 
-// // // // // // // repeatStringNumTimes("abc", 3);
-// // // // // // // repeatStringNumTimes("*", 3);
-// // // // // // // repeatStringNumTimes("abc", 4);
-// // // // // // // repeatStringNumTimes("abc", 1);
-// // // // // // // repeatStringNumTimes("*", 8);
-// // // // // // // repeatStringNumTimes("abc", -2);
-// // // // // // // repeatStringNumTimes("abc", 0)
+// // // // // // // confirmEnding("Bastian", "n");
 
-// // // // // // // Truncate a String
-// // // // // // function truncateString(str, num) {
-// // // // // //   // Clear out that junk in your trunk
-// // // // // //   if (str.length > num) {
-// // // // // //     return str.slice(0, num) + "...";
-// // // // // //   } else {
-// // // // // //     return str;
+// // // // // // // Repeat a String Repeat a String
+// // // // // // function repeatStringNumTimes(str, num) {
+// // // // // //   let arr = []
+// // // // // //   for(let i = 0; i < num && num > 0; i++){
+// // // // // //     arr.push(str)
+// // // // // //     // console.log(str)
 // // // // // //   }
+
+// // // // // //   if(num > 0) {
+// // // // // //     str = arr.toString().replaceAll(',', '');
+// // // // // //     console.log(str);
+// // // // // //     return str;
+// // // // // //   }else {
+// // // // // //     console.log("");
+// // // // // //     return "";
+// // // // // //   }
+
 // // // // // // }
 
-// // // // // // truncateString("A-tisket a-tasket A green and yellow basket", 8);
+// // // // // // repeatStringNumTimes("abc", 3);
+// // // // // // repeatStringNumTimes("*", 3);
+// // // // // // repeatStringNumTimes("abc", 4);
+// // // // // // repeatStringNumTimes("abc", 1);
+// // // // // // repeatStringNumTimes("*", 8);
+// // // // // // repeatStringNumTimes("abc", -2);
+// // // // // // repeatStringNumTimes("abc", 0)
 
-// // // // // // Finders Keepers
-// // // // // function findElement(arr, func) {
-// // // // //   let num = 0;
-// // // // //   for (let i = 0; i < arr.length; i++) {
-// // // // //     // console.log(arr[i]);
-// // // // //     if (func(arr[i])) {
-// // // // //       console.log(arr[i]);
-// // // // //       return (num = arr[i]);
-// // // // //     }
+// // // // // // Truncate a String
+// // // // // function truncateString(str, num) {
+// // // // //   // Clear out that junk in your trunk
+// // // // //   if (str.length > num) {
+// // // // //     return str.slice(0, num) + "...";
+// // // // //   } else {
+// // // // //     return str;
 // // // // //   }
-
-// // // // //   return undefined;
 // // // // // }
 
-// // // // // findElement([1, 2, 3, 4], (num) => num % 2 === 0);
-// // // // // findElement([1, 3, 5, 8, 9, 10], (num) => num % 2 === 0);
-// // // // // findElement([1, 3, 5, 9], (num) => num % 2 === 0);
+// // // // // truncateString("A-tisket a-tasket A green and yellow basket", 8);
 
-// // // // // Boo who
-// // // // function booWho(bool) {
-// // // //   let ans = typeof true;
-
-// // // //   if (ans === typeof bool) {
-// // // //     console.log(true);
-// // // //     return true;
-// // // //   } else {
-// // // //     console.log(false);
-// // // //     return false;
+// // // // // Finders Keepers
+// // // // function findElement(arr, func) {
+// // // //   let num = 0;
+// // // //   for (let i = 0; i < arr.length; i++) {
+// // // //     // console.log(arr[i]);
+// // // //     if (func(arr[i])) {
+// // // //       console.log(arr[i]);
+// // // //       return (num = arr[i]);
+// // // //     }
 // // // //   }
+
+// // // //   return undefined;
 // // // // }
 
-// // // // booWho(null);
-// // // // booWho(true);
-// // // // booWho(false);
-// // // // booWho([1, 2, 3]);
-// // // // booWho([].slice);
-// // // // booWho({ "a": 1 });
-// // // // booWho(1);
-// // // // booWho(NaN);
-// // // // booWho("a");
-// // // // booWho("true");
-// // // // booWho("false");
+// // // // findElement([1, 2, 3, 4], (num) => num % 2 === 0);
+// // // // findElement([1, 3, 5, 8, 9, 10], (num) => num % 2 === 0);
+// // // // findElement([1, 3, 5, 9], (num) => num % 2 === 0);
 
-// // // // Title Case a Sentence
-// // // function titleCase(str) {
-// // //   return str
-// // //     .toLowerCase()
-// // //     .split(" ")
-// // //     .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
-// // //     .join(" ");
+// // // // Boo who
+// // // function booWho(bool) {
+// // //   let ans = typeof true;
+
+// // //   if (ans === typeof bool) {
+// // //     console.log(true);
+// // //     return true;
+// // //   } else {
+// // //     console.log(false);
+// // //     return false;
+// // //   }
 // // // }
 
-// // // titleCase("I'm a little tea pot");
+// // // booWho(null);
+// // // booWho(true);
+// // // booWho(false);
+// // // booWho([1, 2, 3]);
+// // // booWho([].slice);
+// // // booWho({ "a": 1 });
+// // // booWho(1);
+// // // booWho(NaN);
+// // // booWho("a");
+// // // booWho("true");
+// // // booWho("false");
 
-// // //
-// // function frankenSplice(arr1, arr2, n) {
-// //   let newArr1 = [...arr1];
-// //   let newArr2 = [...arr2];
-// //   newArr2.splice(n,0,...newArr1);
-
-// //   // console.log(newArr2);
-// //   return newArr2;
+// // // Title Case a Sentence
+// // function titleCase(str) {
+// //   return str
+// //     .toLowerCase()
+// //     .split(" ")
+// //     .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+// //     .join(" ");
 // // }
 
-// // frankenSplice([1, 2, 3], [4, 5, 6], 1);
-// // frankenSplice([1, 2], ["a", "b"], 1);
-// // frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2);
-// // frankenSplice([1, 2, 3, 4], [], 0);
+// // titleCase("I'm a little tea pot");
 
-// // Falsy Bouncer;
-// function bouncer(arr) {
-//   let newArr = [];
+// //
+// function frankenSplice(arr1, arr2, n) {
+//   let newArr1 = [...arr1];
+//   let newArr2 = [...arr2];
+//   newArr2.splice(n,0,...newArr1);
 
-//   for (let i = 0; i < arr.length; i++) {
-//     if(arr[i]) {
-
-//       newArr.push(arr[i]);
-//     }
-//   }
-//   console.log(newArr)
-//   return newArr;
+//   // console.log(newArr2);
+//   return newArr2;
 // }
 
-// bouncer([7, "ate", "", false, 9]);
-// bouncer(["a", "b", "c"]);
-// bouncer([false, null, 0, NaN, undefined, ""]);
-// bouncer([null, NaN, 1, 2, undefined]);
+// frankenSplice([1, 2, 3], [4, 5, 6], 1);
+// frankenSplice([1, 2], ["a", "b"], 1);
+// frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2);
+// frankenSplice([1, 2, 3, 4], [], 0);
+
+// Falsy Bouncer;
+function bouncer(arr) {
+  let newArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      newArr.push(arr[i]);
+    }
+  }
+  console.log(newArr);
+  return newArr;
+}
+
+bouncer([7, "ate", "", false, 9]);
+bouncer(["a", "b", "c"]);
+bouncer([false, null, 0, NaN, undefined, ""]);
+bouncer([null, NaN, 1, 2, undefined]);
 
 // Where do I Belong
