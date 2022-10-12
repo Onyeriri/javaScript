@@ -2546,4 +2546,153 @@ getIndexToIns([2, 5, 10], 15);
 getIndexToIns([], 1);
 getIndexToIns([], 1);
 
-//
+// Mutations
+function mutation(arr) {
+  let subStr1 = arr[0].toLowerCase();
+  let subStr2 = arr[1].toLowerCase();
+
+  // console.log(subStr1.indexOf(subStr2[0]));/
+  for (let i = 0; i < subStr1.length && i < subStr2.length; i++) {
+    if (subStr1.indexOf(subStr2[i]) === -1) {
+      console.log(false);
+      return false;
+    }
+
+    //  return subStr1.indexOf(subStr2[i])  === -1 && i === subStr2[subStr2.length - 1]  ? console.log(false) : console.log(true);
+    //   if(subStr1.indexOf(subStr2[i]) === -1) {
+    //     console.lo
+    //     return false;
+    //   }
+    //   if (subStr1.indexOf(subStr2[i])) {
+
+    //     console.log(i);
+    //     console.log(subStr2[i]);
+    //     console.log(i);
+    //   }
+    //   console.log(i);
+    //   count++;
+  }
+  // console.log(arr[0][4]);
+  console.log(true);
+  return true;
+}
+
+mutation(["hello", "hel"]);
+mutation(["hello", "hey"]);
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
+mutation(["Mary", "Army"]);
+mutation(["Mary", "Aarmy"]);
+mutation(["Alien", "line"]);
+mutation(["floor", "for"]);
+mutation(["hello", "neo"]);
+mutation(["voodoo", "no"]);
+mutation(["ate", "date"]);
+mutation(["ate", "date"]);
+mutation(["Tiger", "Zebra"]);
+mutation(["Noel", "Ole"]);
+
+// Chunky Monkey
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  let newArr = [];
+  for (let i = 0; i < arr.length; i += size) {
+    newArr.push(arr.slice(i, i + size));
+  }
+  return newArr;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+// Create a Basic JavaScript Object
+let dog = {
+  name: "dog",
+  numLegs: 4,
+};
+
+// Use Dot Notation to Access the Properties of an Object
+let dg = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs() {
+    return "This dog has 4 legs.";
+  },
+};
+
+dog.sayLegs();
+
+// Make Code More Reusable with the this Keyword
+let g = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs: function () {
+    return "This dog has " + this.numLegs + " legs.";
+  },
+};
+
+dog.sayLegs();
+
+// Define a Constructor Function
+function Dog() {
+  this.name = "Dog";
+  this.color = "Black";
+  this.numLegs = 4;
+}
+
+// Use a Constructor to Create Objects
+function Dog() {
+  this.name = "Rupert";
+  this.color = "brown";
+  this.numLegs = 4;
+}
+// Only change code below this line
+
+const hound = new Dog();
+
+// Extend Constructors to Receive Arguments
+function Dog(name, color) {
+  this.name = name;
+  this.color = color;
+  this.numLegs = 4;
+}
+
+const terrier = new Dog("Hello", "World");
+
+// Verify an Object's Constructor with instanceof
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+
+// Only change code below this line
+const myHouse = new House("Die hard");
+
+console.log(myHouse instanceof House);
+
+// Understand Own Properties
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+// Only change code below this line
+
+for (let property in canary) {
+  if (canary.hasOwnProperty(property)) {
+    ownProps.push(property);
+  }
+}
+
+console.log(ownProps);
+
+// Use Prototype Properties to Reduce Duplicate Code
+function Dog(name) {
+  this.name = name;
+}
+
+// Only change code above this line
+let beagle = new Dog("Snoopy");
+
+Dog.prototype.numLegs = 4;
+
+// Iterate Over All Properties
